@@ -8,3 +8,5 @@ services:
       - "5000:5000"
     volumes:
       - ./registry_data:/var/lib/registry
+    env_file:
+      - ./env/.registry.env
