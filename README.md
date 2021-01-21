@@ -98,6 +98,14 @@ docker run -d -p 5000:5000 --name registry registry:2.7.1
 docker pull <docker-registry-ip>:5000/localubuntu
 ```
 
+## Secure connections
+
+To enable secure connections one has to first get a certificate and appropiate priv key from a trusted source.
+These are then put into the `certs` folder. In the current setup these files are `fullchain.pem` for the certificate and `privkey.pem` for the private key. Both files are not included in the repository.
+The environment variables set in `env/.registry.env.example` show how the locations of the certificate and key can be given to the registry. A simple restart of the service should be enough to have a secure connection to the repository.
+Do not forget to disable `httpd`, since only one application can listen on port 443.
+
+
 
 # Resources
 

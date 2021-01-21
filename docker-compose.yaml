@@ -4,8 +4,6 @@ services:
   registry:
     image: registry:2.7.1
     restart: unless-stopped
-    ports:
-      - "5000:5000"
     volumes:
       - ./registry_data:/var/lib/registry
     env_file:
