@@ -6,3 +6,4 @@ services:
       - "443:443"
     volumes:
       - ./certs:/certs:ro
+      - ./auth:/auth:ro

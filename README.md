@@ -105,6 +105,14 @@ These are then put into the `certs` folder. In the current setup these files are
 The environment variables set in `env/.registry.env.example` show how the locations of the certificate and key can be given to the registry. A simple restart of the service should be enough to have a secure connection to the repository.
 Do not forget to disable `httpd`, since only one application can listen on port 443.
 
+## Password safety
+
+The most minimal example for securing the registry is using `htpasswd`.
+Use the following command to generate the `htpasswd` file for authentication in the `auth` folder. 
+
+```shell
+htpasswd -Bbn `<username>` `<password>` > auth/htpasswd
+```
 
 
 # Resources
