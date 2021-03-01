@@ -4,6 +4,7 @@ services:
   registry:
     ports:
       - "443:443"
+      - "4443:4443"
     volumes:
       - ./certs:/certs:ro
       - ./auth:/auth:ro
