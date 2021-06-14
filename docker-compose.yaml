@@ -9,7 +9,7 @@ services:
     image: registry:2.7.1
     restart: unless-stopped
     volumes:
-      - ./registry_data:/var/lib/registry
+      - /lsdf-eudat-eosc-storage:/var/lib/registry
     env_file:
       - ./env/.registry.env
     depends_on:
